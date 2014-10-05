@@ -63,6 +63,8 @@
 
 @interface MDCalendar : UIView
 
+- (void)reloadData;
+
 @property (nonatomic, assign) id<MDCalendarDelegate>delegate; /** A delegate that responds to calendar events. */
 
 ///--------------------------------
@@ -263,6 +265,16 @@
  * Reports the selected date.
  */
 - (void)calendarView:(MDCalendar *)calendarView didSelectDate:(NSDate *)date;
+
+/**
+ * Reports the first visable date did change.
+ */
+- (void)calendarView:(MDCalendar *)calendarView firstVisableDateDidChangeTo:(NSDate *)date;
+
+/**
+ * Reports some day of a month will display.
+ */
+- (void)calendarView:(MDCalendar *)calendarView dayOfMonthWillDisplay:(NSDate *)date;
 
 /**
  * Implement this delegate method to specify which dates should be selectable.

@@ -106,6 +106,16 @@ static CGFloat const kMDCalendarViewLineSpacing    = 1.f;
     [self scrollCalendarToDate:_selectedDate animated:NO];
 }
 
+- (void)reloadData
+{
+    if (self.collectionView.isTracking
+        || self.collectionView.isDragging
+        || self.collectionView.isDecelerating) {
+        return;
+    }
+    [self.collectionView reloadData];
+}
+
 #pragma mark - Custom Accessors
 - (void)setBackgroundColor:(UIColor *)backgroundColor
 {
@@ -297,12 +307,14 @@ static CGFloat const kMDCalendarViewLineSpacing    = 1.f;
     else if ([date isEqualToDateSansTime:_selectedDate]) {
         // Handle cell selection
         cell.selected = YES;
-        [collectionView selectItemAtIndexPath:indexPath
-                                     animated:YES
-                               scrollPosition:UICollectionViewScrollPositionNone];
     }
     
     cell.indicatorColor = (showIndicator? _indicatorColor: [UIColor clearColor]);
+    
+    if ([self.delegate respondsToSelector:@selector(calendarView:dayOfMonthWillDisplay:)]) {
+        NSDate *date = [self _dateForFirstDayOfSection:indexPath.section];
+        [self.delegate calendarView:self dayOfMonthWillDisplay:date];
+    }
     
     return cell;
 }
@@ -355,6 +367,25 @@ static CGFloat const kMDCalendarViewLineSpacing    = 1.f;
     }
     
     return YES;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView != self.collectionView) {
+        return;
+    }
+    
+    NSSet *visibleSections = [NSSet setWithArray:
+                              [[self.collectionView indexPathsForVisibleItems] valueForKey:@"section"]];
+    NSArray *sections = [[visibleSections allObjects]
+                         sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+                             return [obj1 compare:obj2];
+                         }];
+    
+    if ([self.delegate respondsToSelector:@selector(calendarView:firstVisableDateDidChangeTo:)]) {
+        NSDate *date = [self _dateForFirstDayOfSection:[[sections firstObject] integerValue]];
+        [self.delegate calendarView:self firstVisableDateDidChangeTo:date];
+    }
 }
 
 #pragma mark - UICollectionViewFlowLayoutDelegate
