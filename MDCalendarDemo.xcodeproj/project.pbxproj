@@ -23,6 +23,9 @@
 		0C50FBBC192FBCFC0043D2D5 /* MDCalendarDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C50FBBB192FBCFC0043D2D5 /* MDCalendarDemoTests.m */; };
 		0C50FBC9192FBD4A0043D2D5 /* MDCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C50FBC8192FBD4A0043D2D5 /* MDCalendarViewController.m */; };
 		0CB9451B194CFFE800BE3BB1 /* UIColor+MDCalendarDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9451A194CFFE800BE3BB1 /* UIColor+MDCalendarDemo.m */; };
+		E1EF7F2E19E0DAF700B85157 /* MDCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EF7F2919E0DAF700B85157 /* MDCalendarHeaderView.m */; };
+		E1EF7F2F19E0DAF700B85157 /* MDCalendarViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EF7F2B19E0DAF700B85157 /* MDCalendarViewCell.m */; };
+		E1EF7F3019E0DAF700B85157 /* MDCalendarWeekdaysView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EF7F2D19E0DAF700B85157 /* MDCalendarWeekdaysView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,12 @@
 		0C50FBC8192FBD4A0043D2D5 /* MDCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCalendarViewController.m; sourceTree = "<group>"; };
 		0CB94519194CFFE800BE3BB1 /* UIColor+MDCalendarDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MDCalendarDemo.h"; sourceTree = "<group>"; };
 		0CB9451A194CFFE800BE3BB1 /* UIColor+MDCalendarDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MDCalendarDemo.m"; sourceTree = "<group>"; };
+		E1EF7F2819E0DAF700B85157 /* MDCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCalendarHeaderView.h; sourceTree = "<group>"; };
+		E1EF7F2919E0DAF700B85157 /* MDCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCalendarHeaderView.m; sourceTree = "<group>"; };
+		E1EF7F2A19E0DAF700B85157 /* MDCalendarViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCalendarViewCell.h; sourceTree = "<group>"; };
+		E1EF7F2B19E0DAF700B85157 /* MDCalendarViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCalendarViewCell.m; sourceTree = "<group>"; };
+		E1EF7F2C19E0DAF700B85157 /* MDCalendarWeekdaysView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCalendarWeekdaysView.h; sourceTree = "<group>"; };
+		E1EF7F2D19E0DAF700B85157 /* MDCalendarWeekdaysView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCalendarWeekdaysView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +100,12 @@
 			children = (
 				0B7EA04C19364EB6009D95CC /* MDCalendar.h */,
 				0B7EA04D19364EB6009D95CC /* MDCalendar.m */,
+				E1EF7F2A19E0DAF700B85157 /* MDCalendarViewCell.h */,
+				E1EF7F2B19E0DAF700B85157 /* MDCalendarViewCell.m */,
+				E1EF7F2819E0DAF700B85157 /* MDCalendarHeaderView.h */,
+				E1EF7F2919E0DAF700B85157 /* MDCalendarHeaderView.m */,
+				E1EF7F2C19E0DAF700B85157 /* MDCalendarWeekdaysView.h */,
+				E1EF7F2D19E0DAF700B85157 /* MDCalendarWeekdaysView.m */,
 				0B7EA05019364EB6009D95CC /* NSDate+MDCalendar.h */,
 				0B7EA05119364EB6009D95CC /* NSDate+MDCalendar.m */,
 			);
@@ -281,7 +296,10 @@
 				0C50FBA7192FBCFC0043D2D5 /* MDAppDelegate.m in Sources */,
 				0B7EA05419364EB6009D95CC /* NSDate+MDCalendar.m in Sources */,
 				0C50FBC9192FBD4A0043D2D5 /* MDCalendarViewController.m in Sources */,
+				E1EF7F2F19E0DAF700B85157 /* MDCalendarViewCell.m in Sources */,
 				0CB9451B194CFFE800BE3BB1 /* UIColor+MDCalendarDemo.m in Sources */,
+				E1EF7F3019E0DAF700B85157 /* MDCalendarWeekdaysView.m in Sources */,
+				E1EF7F2E19E0DAF700B85157 /* MDCalendarHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

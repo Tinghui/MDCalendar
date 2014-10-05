@@ -93,16 +93,6 @@
 @property (nonatomic, assign) CGFloat lineSpacing;
 
 /**
- * Set `borderHeight` to manually provide a border color. 
- *
- * Default is 0pt.
- *
- * @warning `borderHeight` and `lineSpacing` are mutually exclusive. 
- * If `borderHeight` is set it will override lineSpacing.
- */
-@property (nonatomic, assign) CGFloat borderHeight;
-
-/**
  * Border color of vertical border.
  *
  * Default is @see textColor
@@ -110,13 +100,6 @@
  * @warning this will only apply if @see borderHeight is set
  */
 @property (nonatomic, strong) UIColor *borderColor;
-
-/**
- * Set to `YES` to display a border at the bottom of each month.
- *
- * Default is `NO`
- */
-@property (nonatomic, assign) BOOL showsBottomSectionBorder;
 
 
 ///--------------------------------
@@ -157,14 +140,6 @@
  * Default is system font, size 20
  */
 @property (nonatomic, strong) UIFont  *headerFont;
-
-/**
- * Font for weekday abbreviations.
- * Default is system font, size 12
- *
- * @warning this will be displayed in all caps
- */
-@property (nonatomic, strong) UIFont  *weekdayFont;
 
 ///--------------------------------
 /// @name Appearance : Text Colors
@@ -301,4 +276,5 @@
  * @see indicatorColor
  */
 - (BOOL)calendarView:(MDCalendar *)calendarView shouldShowIndicatorForDate:(NSDate *)date;
+
 @end

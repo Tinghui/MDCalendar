@@ -54,45 +54,85 @@
 }
 
 + (NSArray *)weekdayAbbreviations {
-    return @[@"SUN",
-             @"MON",
-             @"TUE",
-             @"WED",
-             @"THU",
-             @"FRI",
-             @"SAT"];
+    //base on chinese
+    return @[NSLocalizedString(@"日", nil),
+             NSLocalizedString(@"一", nil),
+             NSLocalizedString(@"二", nil),
+             NSLocalizedString(@"三", nil),
+             NSLocalizedString(@"四", nil),
+             NSLocalizedString(@"五", nil),
+             NSLocalizedString(@"六", nil)];
+    
+    //base on english
+    return @[NSLocalizedString(@"SUN", nil),
+             NSLocalizedString(@"MON", nil),
+             NSLocalizedString(@"TUE", nil),
+             NSLocalizedString(@"WED", nil),
+             NSLocalizedString(@"THU", nil),
+             NSLocalizedString(@"FRI", nil),
+             NSLocalizedString(@"SAT", nil)];
 }
 
 + (NSArray *)monthNames {
-    return @[@"Zero",
-             @"January",
-             @"February",
-             @"March",
-             @"April",
-             @"May",
-             @"June",
-             @"July",
-             @"August",
-             @"September",
-             @"October",
-             @"November",
-             @"December"];
+    //base on chinese
+    return @[NSLocalizedString(@"零", nil),
+             NSLocalizedString(@"1月", nil),
+             NSLocalizedString(@"2月", nil),
+             NSLocalizedString(@"3月", nil),
+             NSLocalizedString(@"4月", nil),
+             NSLocalizedString(@"5月", nil),
+             NSLocalizedString(@"6月", nil),
+             NSLocalizedString(@"7月", nil),
+             NSLocalizedString(@"8月", nil),
+             NSLocalizedString(@"9月", nil),
+             NSLocalizedString(@"10月", nil),
+             NSLocalizedString(@"11月", nil),
+             NSLocalizedString(@"12月", nil)];
+    //base on english
+    return @[NSLocalizedString(@"Zero", nil),
+             NSLocalizedString(@"January", nil),
+             NSLocalizedString(@"February", nil),
+             NSLocalizedString(@"March", nil),
+             NSLocalizedString(@"April", nil),
+             NSLocalizedString(@"May", nil),
+             NSLocalizedString(@"June", nil),
+             NSLocalizedString(@"July", nil),
+             NSLocalizedString(@"August", nil),
+             NSLocalizedString(@"September", nil),
+             NSLocalizedString(@"October", nil),
+             NSLocalizedString(@"November", nil),
+             NSLocalizedString(@"December", nil)];
 }
 
 + (NSArray *)shortMonthNames {
-    return @[@"Zero",
-             @"Jan",
-             @"Feb",
-             @"Mar",
-             @"Apr",
-             @"May",
-             @"Jun",
-             @"Jul",
-             @"Aug",
-             @"Sep",
-             @"Oct",
-             @"Nov",
-             @"Dec"];
+    //base on chinese
+    return @[NSLocalizedString(@"零", nil),
+             NSLocalizedString(@"1月", nil),
+             NSLocalizedString(@"2月", nil),
+             NSLocalizedString(@"3月", nil),
+             NSLocalizedString(@"4月", nil),
+             NSLocalizedString(@"5月", nil),
+             NSLocalizedString(@"6月", nil),
+             NSLocalizedString(@"7月", nil),
+             NSLocalizedString(@"8月", nil),
+             NSLocalizedString(@"9月", nil),
+             NSLocalizedString(@"10月", nil),
+             NSLocalizedString(@"11月", nil),
+             NSLocalizedString(@"12月", nil)];
+    //base on english
+    return @[NSLocalizedString(@"Zero", nil),
+             NSLocalizedString(@"Jan", nil),
+             NSLocalizedString(@"Feb", nil),
+             NSLocalizedString(@"Mar", nil),
+             NSLocalizedString(@"Apr", nil),
+             NSLocalizedString(@"May", nil),
+             NSLocalizedString(@"Jun", nil),
+             NSLocalizedString(@"Jul", nil),
+             NSLocalizedString(@"Aug", nil),
+             NSLocalizedString(@"Sep", nil),
+             NSLocalizedString(@"Oct", nil),
+             NSLocalizedString(@"Nov", nil),
+             NSLocalizedString(@"Dec", nil)];
 }
 
 - (NSDate *)firstDayOfMonth {

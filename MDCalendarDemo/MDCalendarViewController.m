@@ -45,11 +45,11 @@
         
         calendarView.backgroundColor = [UIColor whiteColor];
         
-        calendarView.lineSpacing = 0.f;
+        calendarView.lineSpacing = 20.f;
         calendarView.itemSpacing = 0.0f;
-        calendarView.borderColor = [UIColor mightySlate];
-        calendarView.borderHeight = 1.f;
-        calendarView.showsBottomSectionBorder = YES;
+        calendarView.borderColor = [UIColor redColor];
+        
+        calendarView.headerFont = [UIFont systemFontOfSize:14];
         
         calendarView.textColor = [UIColor mightySlate];
         calendarView.headerTextColor = [UIColor mightySlate];
@@ -77,7 +77,7 @@
     [super viewWillLayoutSubviews];
     
     _calendarView.frame = self.view.bounds;
-    _calendarView.contentInset = UIEdgeInsetsMake([self.topLayoutGuide length], 0, [self.bottomLayoutGuide length], 0);
+    _calendarView.contentInset = UIEdgeInsetsMake(94, 0, 120, 0);
 }
 
 #pragma mark - MDCalendarViewDelegate
