@@ -347,8 +347,17 @@ static CGFloat const kMDCalendarViewLineSpacing    = 1.f;
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedDate = [self _dateForIndexPath:indexPath];
+    //unselect old cell
+    NSIndexPath *oldIndexPath = [self _indexPathForDate:self.selectedDate];
+    MDCalendarViewCell *oldCell = [collectionView cellForItemAtIndexPath:oldIndexPath];
+    oldCell.selected = NO;
     
+    //new cell play selection animtion
+    MDCalendarViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    [cell playSelectionAnimation];
+    
+    //mark selected date and call delegate
+    self.selectedDate = [self _dateForIndexPath:indexPath];
     if ([_delegate respondsToSelector:@selector(calendarView:didSelectDate:)]) {
         [_delegate calendarView:self didSelectDate:self.selectedDate];
     }

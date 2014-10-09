@@ -25,4 +25,6 @@
 
 @property (nonatomic, assign) NSDate  *date;
 
+- (void)playSelectionAnimation;
+
 @end

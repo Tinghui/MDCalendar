@@ -89,19 +89,21 @@
     highlightView.hidden = !selected;
     _label.textColor = selected ? self.backgroundColor : _textColor;
     
-    if (!self.selected && selected) {
-        
-        highlightView.transform = CGAffineTransformMakeScale(.1f, .1f);
-        [UIView animateWithDuration:0.4
-                              delay:0.0
-             usingSpringWithDamping:0.5
-              initialSpringVelocity:1.0
-                            options:UIViewAnimationOptionCurveEaseInOut
-                         animations:^{
-                             highlightView.transform = CGAffineTransformIdentity;
-                         } completion:nil];
-    }
     [super setSelected:selected];
+}
+
+- (void)playSelectionAnimation
+{
+    UIView *highlightView = _highlightView;
+    highlightView.transform = CGAffineTransformMakeScale(.1f, .1f);
+    [UIView animateWithDuration:0.4
+                          delay:0.0
+         usingSpringWithDamping:0.5
+          initialSpringVelocity:1.0
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         highlightView.transform = CGAffineTransformIdentity;
+                     } completion:nil];
 }
 
 - (void)layoutSubviews
